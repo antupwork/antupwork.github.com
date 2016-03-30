@@ -11,6 +11,24 @@ function domReady(fn){
 		});	
 	}	
 }
+function rnd(n,m){
+	return parseInt(n+Math.random()*(m-n));
+}
+
+function addEvent(obj,fn,sEv){
+	if(obj.addEventListener){
+		obj.addEventListener(sEv,fn,false);
+	}else{
+		obj.attachEvent('on'+sEv,fn);
+	}
+}
+function removeEvent(obj,fn,sEv){
+	if(obj.removeEventListener){
+		obj.removeEventListener(sEv,fn,false);
+	}else{
+		obj.detachEvent('on'+sEv,fn);
+	}
+}
 function getStyle(obj,sName){
 	return (obj.currentStyle||getComputedStyle(obj,false))[sName];
 }
@@ -104,6 +122,9 @@ function startMove(obj,json,options){
 //through
 function a2d(n){
 	return n*180/Math.PI;
+}
+function d2a(n){
+	return n*Math.PI/180;
 }
 function hoverDir(obj,ev){
 	var oS=document.documentElement.scrollTop||document.body.scrollTop;

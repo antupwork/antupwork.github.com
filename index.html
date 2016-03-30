@@ -130,7 +130,7 @@ domReady(function(){
 		var aCh=oUl.children;
 		for(var i=0;i<aCh.length;i++){
 			through(aCh[i]);
-			aCh[i].style.background='url(images/2.jpg) no-repeat';	
+			aCh[i].style.background='url(images/'+(i+1)+'.jpg) no-repeat';	
 		}
 	})();
 	//worklist
@@ -154,7 +154,91 @@ domReady(function(){
 				aLi[i].className=aClass[i];
 			}
 		};
-	})();	
+	})();
+	//ball	
+	;(function(){
+		var aBox=document.querySelectorAll('.ball');
+		var oS=document.documentElement.srollTop||document.body.scrollTop;
+		var oH=document.documentElement.clientHeight;
+		for(var i=0;i<aBox.length;i++){
+				aBox[i].iSpeedX = 0;
+				aBox[i].iSpeedY = 0;
+				aBox[i].lastX = 0;
+				aBox[i].lastY = 0;
+				aBox[i].style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+				aBox[i].style.left=i*100+'px';
+				drag(aBox[i]);				
+		}
+		function drag(obj){
+			obj.onmousedown=function(ev){
+				var _this = this;
+				clearInterval(_this.timer);
+				var oEvent=ev||event;
+				var disX=oEvent.clientX-_this.offsetLeft;
+				var disY=oEvent.clientY-_this.offsetTop-oS;
+				addEvent(document,fnMove,'mousemove');
+				addEvent(document,fnUp,'mouseup');
+				function fnUp(){
+					elastic(_this);
+					removeEvent(document,fnMove,'mousemove');
+					removeEvent(document,fnUp,'mouseup');
+					_this.releaseCapture&&_this.releaseCapture();
+				};
+				function fnMove(ev){
+					var oEvent=ev||event;
+					_this.style.left=oEvent.clientX-disX+'px';
+					_this.style.top=oEvent.clientY-disY-oS+'px';
+					_this.iSpeedX=oEvent.clientX-_this.lastX;
+					_this.iSpeedY=oEvent.clientY-_this.lastY;
+					_this.lastX=oEvent.clientX;
+					_this.lastY=oEvent.clientY;
+				}
+				_this.setCapture&&_this.setCapture();
+				return false;
+			};
+		}
+		
+		function elastic(obj){
+			clearInterval(obj.timer);
+			obj.timer=setInterval(function(){
+				obj.iSpeedY+=6;
+				var t=obj.offsetTop+obj.iSpeedY;
+				var l=obj.offsetLeft+obj.iSpeedX;
+				if(l<0){
+					l=0;
+					obj.iSpeedX*=-0.8;
+					obj.iSpeedY*=0.8;
+				}
+				if(t<0){
+					t=0;
+					obj.iSpeedX*=0.8;
+					obj.iSpeedY*=-0.8;
+				}
+				if(l>document.documentElement.clientWidth-obj.offsetWidth){
+					l=document.documentElement.clientWidth-obj.offsetWidth;
+					obj.iSpeedX*=-0.8;
+					obj.iSpeedY*=0.8;
+				}
+				if(t>obj.parentNode.offsetHeight-obj.offsetHeight){
+					t=obj.parentNode.offsetHeight-obj.offsetHeight;
+					obj.iSpeedX*=0.8;
+					obj.iSpeedY*=-0.8;
+				}
+				obj.style.left=l+'px';
+				obj.style.top=t+'px';					
+				if(Math.abs(obj.iSpeedX)<1){
+					obj.iSpeedX=0;
+				}
+				if(Math.abs(obj.iSpeedY)<1){
+					obj.iSpeedY=0;
+				}
+				if(obj.iSpeedX==0&&obj.iSpeedY==0&&t==document.documentElement.clientHeight-obj.offsetHeight){
+					clearInterval(obj.timer);
+				}
+			
+			},30);
+		}	
+	})();
 })
 </script>
 </head>
@@ -179,6 +263,10 @@ domReady(function(){
 		<div class="sec"></div>
 		<p class="dot"></p>
 	</div>
+	<span class="ball"></span>
+	<span class="ball"></span>
+	<span class="ball"></span>
+	<span class="ball"></span>
 </div>
 <div class="worklist">
 	<ul>
@@ -201,8 +289,6 @@ domReady(function(){
 </div>
 <div class="through">
 	<ul id="through" class=" wrapper">
-		<li><span><a href="javascript:;">css / html</a></span></li>
-		<li><span><a href="javascript:;">css / html</a></span></li>
 		<li><span><a href="javascript:;">css / html</a></span></li>
 		<li><span><a href="javascript:;">css / html</a></span></li>
 		<li><span><a href="javascript:;">css / html</a></span></li>
