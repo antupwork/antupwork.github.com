@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{background: #000;}
+		.change_3d{width: 120px;height: 210px;position: relative;margin: 500px 100px;-webkit-transform:perspective(800px) rotateY(0deg) rotateX(0deg);-webkit-transform-style:preserve-3d;}
+		.change_3d span{width: 100%;height: 100%; position: absolute;left: 0;top: 80px;}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			var oChange=document.getElementById('change');
+			var N=8;
+			for(var i=0;i<N;i++){
+				var oS=document.createElement('span');
+				oS.style.background='url(images/'+(i+14)+'.png) no-repeat';
+				oS.style.backgroundSize='contain'
+				oChange.appendChild(oS);
+				oS.style.WebkitTransition='1s all ease '+(N-i)*200+'ms';
+				(function(oS,i){
+					setTimeout(function(){
+						oS.style.WebkitTransform='rotateY('+360/N*i+'deg) translateZ(360px)';	
+					},0);
+				})(oS,i);
+			}
+			var y=0;
+			var x=0;
+			var iSpeedX=0,
+				iSpeedY=0,
+				lastX=0,
+				lastY=0,
+				timer=null;
+
+			oChange.onmousedown=function(ev){
+				var oEvent=ev||event;
+				var disX=oEvent.clientX-y;
+				var disY=oEvent.clientY-x;
+				document.onmousemove=function(ev){
+					var oEvent=ev||event;
+					y=oEvent.clientX-disX;
+					x=oEvent.clientY-disY;
+					oChange.style.WebkitTransform='perspective(800px) rotateY('+y/10+'deg) rotateX('+-x/10+'deg)';
+					iSpeedX=oEvent.clientX-lastX;
+					iSpeedY=oEvent.clientY-lastY;
+					lastX=oEvent.clientX;
+					lastY=oEvent.clientY;
+				};
+				document.onmouseup=function(){
+					document.onmouseup=null;
+					document.onmousemove=null;
+					oBox.timer=setInterval(function(){
+						iSpeedX*=0.99;
+						iSpeedY*=0.99;
+						y+=iSpeedX;
+						x+=iSpeedY;
+						oChange.style.WebkitTransform='perspective(800px) rotateX('+-x/10+'deg) rotateY('+y/10+'deg)';
+						if(Math.abs(iSpeedX)<1)iSpeedX=0;
+						if(Math.abs(iSpeedY)<1)iSpeedY=0;
+						if(iSpeedX==0&&iSpeedY==0){
+							clearInterval(oBox.timer);
+						}
+					},30);
+				};
+				return false;
+			};
+		},false);
+	</script>
+</head>
+<body>
+	<div id="change" class="change_3d">
+		
+	</div>
+</body>
+</html>

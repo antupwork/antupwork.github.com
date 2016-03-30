@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>幻灯片</title>
+<style>
+*{margin:0; padding:0; list-style:none;}
+#box{width:600px; height:400px; margin:100px auto; position:relative; top:0; left:0; overflow:hidden;}
+#box ul{position:absolute; top:0; left:0; width:2400px; height:400px;}
+#box ul li{width:600px; height:400px; float:left; text-align:center; line-height:400px; font-size:50px;}
+#box ol{position:absolute; bottom:40px; left:50%; width:400px; height:20px; margin-left:-200px;}
+#box ol li{width:80px; height:20px; background:#ccc; margin:10px; float:left; position:relative;}
+#box ul li img{ width:100%; height:100%;}
+#box ol li span{ position:absolute; width:0; height:20px; background:#F30;}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var oBox = document.getElementById('box');
+	var oUl = oBox.children[0];
+	var oOl = oBox.children[1];
+	var aLi = oUl.children;
+	var aS = oOl.getElementsByTagName('span');
+	var iNow = 0;
+	function next(){
+		for(var i=0;i<aS.length;i++){
+			aS[i].style.width = 0;
+		}
+		startMove(aS[iNow],{width:80},{easing:'linear',complete:function(){
+			iNow++;
+			if(iNow==aLi.length){
+				iNow = 0;
+			}
+			startMove(oUl,{left:-iNow*aLi[0].offsetWidth},{complete:function(){
+				next();
+			}});
+		}});
+	}
+	next();
+};
+</script>
+</head>
+
+<body>
+<div id="box">
+	<ul>
+		<li style="background:#f90;"><img src="img/0.jpg"/></li>
+		<li style="background:#399;"><img src="img/1.jpg"/></li>
+		<li style="background:#f33;"><img src="img/2.jpg"/></li>
+		<li style="background:#33f;"><img src="img/3.jpg"/></li>
+	</ul>
+	<ol>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+	</ol>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

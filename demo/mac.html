@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mac</title>
+<style>
+*{margin:0; padding:0;}
+body{ background:#666;}
+div{position:fixed; left:0; bottom:0;  width:100%; text-align:center;}
+</style>
+<script>
+window.onload=function(){
+	var oBox = document.getElementsByTagName('div')[0];
+	var aImg = oBox.children;
+	document.onmousemove=function(ev){
+		var oEvent = ev||event;
+		for(var i=0;i<aImg.length;i++){
+			var a = oBox.offsetLeft+aImg[i].offsetLeft+aImg[i].offsetWidth/2-oEvent.clientX;
+			var b = oBox.offsetTop+aImg[i].offsetTop+aImg[i].offsetHeight/2-oEvent.clientY;
+			var c = Math.sqrt(a*a+b*b);
+			var scale = 1-c/500;
+			
+			(scale<0.5)&&(scale=0.5);
+				document.title=oBox.offsetTop
+			aImg[i].width = scale*128;
+			
+			
+			
+			
+			
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+<div>
+	<img src="img/1.png" width="64" />
+	<img src="img/2.png" width="64" />
+	<img src="img/3.png" width="64" />
+	<img src="img/4.png" width="64" />
+	<img src="img/5.png" width="64" />
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

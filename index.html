@@ -82,7 +82,8 @@ domReady(function(){
 	})();
 	//back to top
 	;(function(){
-		var oBox=document.querySelector('.back');	
+		var oBox=document.querySelector('.back');
+		var aA=document.querySelectorAll('.nav a');	
 		var bOk=false;
 		var oHead=document.querySelector('.header');
 		var oHead_B=document.querySelector('.header_bck');
@@ -106,22 +107,31 @@ domReady(function(){
 				oBox.style.display='none';	
 			}	
 		};
-		oBox.onclick=function(){
+		function backP(obj,space){
 			var start=document.documentElement.scrollTop||document.body.scrollTop;
-			var iTarget=0;
+			var iTarget=space;
 			var dis=iTarget-start;
 			var count=Math.floor(1000/30);
 			var n=0;
-			clearInterval(oBox.timer);	
-			oBox.timer=setInterval(function(){
+			clearInterval(obj.timer);	
+			obj.timer=setInterval(function(){
 				bOk=false;
 				n++;
 				var a=1-n/count;
 				document.documentElement.scrollTop=document.body.scrollTop=start+dis*(1-Math.pow(a,3));
 				if(n==count){
-					clearInterval(oBox.timer);	
+					clearInterval(obj.timer);	
 				}	
 			},30);
+		}
+		aA[0].onclick=oBox.onclick=function(){
+			backP(oBox,0);
+		};
+		aA[1].onclick=function(){
+			backP(aA[0],620);
+		};
+		aA[2].onclick=function(){
+			backP(aA[2],1200);
 		};
 	})();
 	//through
@@ -129,8 +139,9 @@ domReady(function(){
 		var oUl=document.getElementById('through');	
 		var aCh=oUl.children;
 		for(var i=0;i<aCh.length;i++){
+			aCh[i].style.background='rgba('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+',0.4)';
+			aCh[i].children[0].style.background='rgba('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+',0.7)';
 			through(aCh[i]);
-			aCh[i].style.background='url(images/'+(i+1)+'.jpg) no-repeat';	
 		}
 	})();
 	//worklist
@@ -165,7 +176,7 @@ domReady(function(){
 				aBox[i].iSpeedY = 0;
 				aBox[i].lastX = 0;
 				aBox[i].lastY = 0;
-				aBox[i].style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+				aBox[i].style.background='rgba('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+',0.5)';
 				aBox[i].style.left=i*100+'px';
 				drag(aBox[i]);				
 		}
@@ -248,39 +259,38 @@ domReady(function(){
 	<div class="clearfix wrapper nav">
 		<span></span>
 		<a href="javasctipr:;">Home</a>
-		<a href="javasctipr:;">About Me	</a>
 		<a href="javasctipr:;">WorkHouse</a>
+		<a href="javasctipr:;">Work skill</a>
+		<a href="javasctipr:;">About Me</a>
 		<a href="javasctipr:;">Contact Me</a>
 	</div>
 </div>
 <div class="header_bck"></div>
 <div class="top_pic">
-	<img src="images/cover-01.jpg"/>
-	<h1>ant</h1>
+	<img src="images/Z.jpg"/>
+	<h1>Learning the Future in a Connected Worldant。</h1>
 	<div class="clock">
 		<div class="hour"></div>
 		<div class="min"></div>
 		<div class="sec"></div>
 		<p class="dot"></p>
 	</div>
-	<span class="ball"></span>
-	<span class="ball"></span>
-	<span class="ball"></span>
-	<span class="ball"></span>
+	<span class="ball">css、html</span>
+	<span class="ball">Javascript</span>
+	<span class="ball">DOM</span>
+	<span class="ball">Jquery</span>
 </div>
 <div class="worklist">
+	<h3>Display of works</h3>
 	<ul>
-		<li class="cur"><a href="javascript:;"></a></li>
-		<li class="r1">2</li>
-		<li class="r2">3</li>
-		<li>4</li>
-		<li>5</li>
-		<li>6</li>
-		<li>7</li>
-		<li>8</li>
-		<li>9</li>
-		<li class="l2">10</li>
-		<li class="l1">11</li>
+		<li class="cur"><a href="demo/chose.html" target="_blank"><img src="images/work1.jpg"/></a><p>自动播放选项卡</p></li>
+		<li class="r1"><a href="demo/slide.html" target="_blank"><img src="images/work2.jpg"/></a><p>进度条选项卡</p></li>
+		<li class="r2"><a href="demo/workshow.html" target="_blank"><img src="images/work3.jpg"/></a><p>Drag</p></li>
+		<li><a href="demo/mac.html" target="_blank"><img src="images/work4.jpg"/></a><p>Mac菜单模拟</p></li>
+		<li><a href="demo/paging.html" target="_blank"><img src="images/work5.jpg"/></a><p>分页效果</p></li>
+		<li><a href="demo/boom.html" target="_blank"><img src="images/work6.jpg"/></a><p>Css3爆炸效果</p></li>
+		<li class="l2"><a href="demo/cube.html" target="_blank"><img src="images/work7.jpg"/></a><p>Css3立方体</p></li>
+		<li class="l1"><a href="demo/3Dchange.html" target="_blank"><img src="images/work8.jpg"/></a><p>3d展示</p></li>
 	</ul>
 	<div class="worklist-btn">
 		<a href="javascript:;" class="prev">←</a>
@@ -288,15 +298,17 @@ domReady(function(){
 	</div>
 </div>
 <div class="through">
+	<h3>Work Skill</h3>
 	<ul id="through" class=" wrapper">
-		<li><span><a href="javascript:;">css / html</a></span></li>
-		<li><span><a href="javascript:;">css / html</a></span></li>
-		<li><span><a href="javascript:;">css / html</a></span></li>
-		<li><span><a href="javascript:;">css / html</a></span></li>
+		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
+		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
+		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
+		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
 	</ul>
 </div>
 <div class="back">
 	<img src="images/loading.gif"/>
 </div>
+
 </body>
 </html>
