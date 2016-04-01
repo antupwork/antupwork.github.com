@@ -34,17 +34,8 @@ body{ height:3000px; background-color:transparent;}
 .needle_m{ width:4px; height:8px; background:#066; position:absolute;left:50%; top:0; margin-left:-2px; -webkit-transform-origin:center 80px; font-style:normal;}
 .needle_m span{ width:12px; height:12px; top:10px; position:absolute;left:50%; margin-left:-10px; font-size:12px; text-align:center; line-height:12px; font-weight:bold; color:#d7dce4; }
 .dot{ width:8px; height:8px; background:#6b7889; border-radius:50%; position:absolute; left:50%; top:50%; margin-left:-4px;margin-top:-4px; box-shadow:0 0 10px #fff;}
-.top_pic .ball{width:130px;height: 130px;position: absolute;border-radius: 50%; left:0; bottom: 0; cursor: pointer; z-index: 5; color: #fff; font-weight: bolder; font-size:20px; line-height:130px;text-align:center;	}
-
-.through{ width:100%; min-width:1000px; background:url(../images/bg_star.jpg);}
-.through h3{ font-size:30px; color:#CCC;}
-.through ul{overflow:hidden;}
-.through ul li{ width:180px; height:240px; border-radius:20%; float:left; position:relative; top:0; left:0; margin:5px; overflow:hidden; margin:30px;}
-.through ul li p{ text-align:center; padding-top:100px; font-size:36px; color:#999;}
-.through ul li a{width:100%; height:100%; border-radius:20%; position:absolute; top:0; left:-180px; text-align:center; padding-top:20px;}
-.through ul li span{ width:100%; height:100%; font-size:26px; color:#CCC;} 
- 
-.worklist{ width:100%; height:638px; background:url(../images/brady_01.jpg) no-repeat; background-size:100% 638px;position:relative; left:0; top:0;}
+.top_pic .ball{width:130px;height: 130px;position: absolute;border-radius: 50%; left:0; top: 0; cursor: pointer; z-index: 5; color: #fff; font-weight: bolder; font-size:20px; line-height:130px;text-align:center;	}
+.worklist{ width:100%; height:638px; background:url(../images/1-19.jpg) no-repeat; background-size:100% 638px;position:relative; left:0; top:0;}
 .worklist h3{ color:#ccc; font-size:30px; padding:50px;}  
 .worklist ul{width:300px; height:200px; position:absolute; top:50%; left:50%; margin-left:-150px; margin-top:-100px; perspective:800px;}
 .worklist ul li{width:100%; height:100%; position:absolute; top:0; left:0; background:#399; text-align:center; line-height:200px; font-size:50px; opacity:0; border:1px solid #000; -webkit-transition:.5s all ease;}
@@ -56,6 +47,15 @@ body{ height:3000px; background-color:transparent;}
 .worklist ul li.cur{opacity:1; z-index:5;}
 .worklist ul li.r1{opacity:0.8; -webkit-transform:translateX(200px) rotateY(-60deg); z-index:3;}
 .worklist ul li.r2{opacity:0; -webkit-transform:translateX(250px) rotateY(-65deg); z-index:1;}
+
+.through{ width:100%; min-width:1000px; background:url(../images/bg_star.jpg);}
+.through h3{ font-size:30px; color:#CCC;}
+.through ul{overflow:hidden;}
+.through ul li{ width:180px; height:240px; border-radius:20%; float:left; position:relative; top:0; left:0; overflow:hidden; margin:30px;}
+.through ul li p{ text-align:center; padding-top:100px; font-size:36px; color:#999;}
+.through ul li a{width:100%; height:100%; border-radius:20%; position:absolute; top:0; left:-180px; text-align:center; padding-top:20px;}
+.through ul li span{ width:100%; height:100%; font-size:26px; color:#CCC;} 
+ 
   
   
   

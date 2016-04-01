@@ -180,7 +180,8 @@ domReady(function(){
 				aBox[i].lastX = 0;
 				aBox[i].lastY = 0;
 				aBox[i].style.background='rgba('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+',0.5)';
-				aBox[i].style.left=i*100+'px';
+				aBox[i].style.left=i*rnd(200,300)+'px';
+				elastic(aBox[i]);
 				drag(aBox[i]);				
 		}
 		function drag(obj){
@@ -305,6 +306,8 @@ domReady(function(){
 		<li><a href="javascript:;"><span>熟悉Bootstrap、自适应布局、百分比布局、弹性布局，熟悉使用canvas制作简单效果</span></a><p>Css3 Html5</p></li>
 		<li><a href="javascript:;"><span>熟悉操作各类增、删、改、查效果</span></a><p>DOM</p></li>
 		<li><a href="javascript:;"><span>代码分离整合，熟悉运动方法，属性，继承</span></a><p>MVC,面向对象</p></li>
+		<li><a href="javascript:;"><span>字符串与数组的转换，排序，增加，删除，修改，查找</span></a><p>计算机算法</p></li>
+		<li><a href="javascript:;"><span>使用Ajax,Jsonp进行前后端数据交互</span></a><p>数据交互</p></li>
 	</ul>
 </div>
 <div class="back">
