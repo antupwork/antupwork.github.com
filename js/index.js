@@ -186,3 +186,22 @@ function through(obj){
 		}
 	};
 }
+function wheel(obj,fn){
+	function site(ev){
+		var oEvent=ev||event;
+		var down=false;
+		if(oEvent.wheelDelta){
+			down=oEvent.wheelDelta>0?true:false;	
+		}else{
+			down=oEvent.detail>0?false:true;	
+		}
+		fn(down);
+		oEvent.preventDefault&&oEvent.preventDefault();
+		return false;	
+	}
+	if(window.navigator.userAgent.indexOf('Firefox')!=-1){
+		obj.addEventListener('DOMMouseScroll',site,false);	
+	}else{
+		obj.onmousewheel=site;	
+	}	
+}

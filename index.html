@@ -100,6 +100,9 @@ domReady(function(){
 			if(bOk){
 				clearInterval(oBox.timer);	
 			}
+			if(bOk){
+				clearInterval(oBox.timer);	
+			}
 			bOk=true;
 			if(oS>100){
 				oBox.style.display='block';	
@@ -146,25 +149,25 @@ domReady(function(){
 	})();
 	//worklist
 	;(function(){
-		var oPrev = document.querySelector('.prev');
-		var oNext = document.querySelector('.next');
+		var oUl=document.querySelector('.worklist ul');
 		var aLi = document.querySelectorAll(' .worklist ul li');
 		var aClass = [];
 		for(var i=0;i<aLi.length;i++){
 			aClass.push(aLi[i].className);
 		}
-		oNext.onclick=function(){
-			aClass.unshift(aClass.pop());
-			for(var i=0;i<aLi.length;i++){
-				aLi[i].className=aClass[i];
-			}
-		};
-		oPrev.onclick=function(){
-			aClass.push(aClass.shift());
-			for(var i=0;i<aLi.length;i++){
-				aLi[i].className=aClass[i];
-			}
-		};
+		wheel(oUl,function(down){
+			if(down){
+				aClass.unshift(aClass.pop());
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].className=aClass[i];
+				}
+			}else{
+				aClass.push(aClass.shift());
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].className=aClass[i];
+				}
+			}	
+		});
 	})();
 	//ball	
 	;(function(){
@@ -282,7 +285,7 @@ domReady(function(){
 </div>
 <div class="worklist">
 	<h3>Display of works</h3>
-	<ul>
+	<ul title="滑动鼠标切换">
 		<li class="cur"><a href="demo/chose.html" target="_blank"><img src="images/work1.jpg"/></a><p>自动播放选项卡</p></li>
 		<li class="r1"><a href="demo/slide.html" target="_blank"><img src="images/work2.jpg"/></a><p>进度条选项卡</p></li>
 		<li class="r2"><a href="demo/workshow.html" target="_blank"><img src="images/work3.jpg"/></a><p>Drag</p></li>
@@ -292,18 +295,16 @@ domReady(function(){
 		<li class="l2"><a href="demo/cube.html" target="_blank"><img src="images/work7.jpg"/></a><p>Css3立方体</p></li>
 		<li class="l1"><a href="demo/3Dchange.html" target="_blank"><img src="images/work8.jpg"/></a><p>3d展示</p></li>
 	</ul>
-	<div class="worklist-btn">
-		<a href="javascript:;" class="prev">←</a>
-		<a href="javascript:;" class="next">→</a>
-	</div>
 </div>
 <div class="through">
 	<h3>Work Skill</h3>
-	<ul id="through" class=" wrapper">
-		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
-		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
-		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
-		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类电商主页</span></a><p>css、html</p></li>
+	<ul id="through" class=" wrapper" >
+		<li><a href="javascript:;"><span>熟练使用HTML和CSS,独立完成各类静态页面布局</span></a><p>Css Html</p></li>
+		<li><a href="javascript:;"><span>熟练使用原生JS,DOM操作实现网页动态效果，实现前后端数据交互</span></a><p>JavaScript</p></li>
+		<li><a href="javascript:;"><span>熟悉使用Jquery，熟悉Jquery插件机制</span></a><p>Jquery</p></li>
+		<li><a href="javascript:;"><span>熟悉Bootstrap、自适应布局、百分比布局、弹性布局，熟悉使用canvas制作简单效果</span></a><p>Css3 Html5</p></li>
+		<li><a href="javascript:;"><span>熟悉操作各类增、删、改、查效果</span></a><p>DOM</p></li>
+		<li><a href="javascript:;"><span>代码分离整合，熟悉运动方法，属性，继承</span></a><p>MVC,面向对象</p></li>
 	</ul>
 </div>
 <div class="back">
