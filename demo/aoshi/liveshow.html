@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>liveshow</title>
+</head>
+<link href="css/common.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link href="css/liveshow.css" rel="stylesheet">
+<script src="js/addready.js"></script>
+<script src="js/liveshow.js"></script>
+<script src="js/mouseWheel.js"></script>
+<script src="js/lb_move.js"></script>
+<body>
+	<div class=" bigbox_yyz wrapper clearfix">
+		<!--头-->
+		<div class="header_yyz">
+			<img src="images/header.png" alt="" />
+			<a href="index.html" class="st_index">视频库</a>
+			<a href="liveshow.html" class="st_liveshow on">播放器</a>
+			<a href="player.html" class="st_player">直播</a>
+		</div>
+		<!--猫头-->
+		<div class="user_yyz clearfix">
+			<div class="search_yyz fl">
+				<input type="text" class="seartxt_yyz">
+				<input type="button" class="searbtn_yyz">
+			</div>
+			<div class="usercon_yyz fl">
+				<ul class="userlist_yyz clearfix">
+					<li class="fl clearfix"><a href="javascript:;" class="active_yyz">傲视影音</a></li>
+					<li class="fl clearfix"><a href="javascript:;">我的播放</a></li>
+					<li class="fl clearfix"><a href="javascript:;">直播</a></li>
+					<li class="fl clearfix"><a href="javascript:;">游戏</a></li>
+					<li class="fl clearfix" style="border-right:none"><a href="javascript:;">用户</a></li>
+				</ul>
+				<div class="usershow_yyz clearfix">
+					<div class="userimg_yyz fl">
+						<img src="images/face.png" alt=" /">
+					</div>
+					<h3 class="fl"> 
+						strive_chen
+						<a href="javascript:;"><img src="images/user_doudou.png" alt=" /"></a>
+					</h3>
+					<p class="fl clearfix userlv">
+						<span class="fl lvimg_yyz"></span>
+						<span class="fl sunimg_yyz">(0)</span>
+						<span class="fl moonimg_yyz">(0)</span>
+						<span class="fl starimg_yyz">(0)</span>
+					</p>
+					<p class="fl clearfix usermoney">
+						<span class="fl">我的硬币:<a href="javascript:;" class="count">1000</a></span>
+						<a href="javascript:;" class="changemoney">我要兑换</a>
+					</p>
+				</div>
+			</div>
+			<div class="xhz_box">
+				<div class="xhz_movieBox" id="xhz_movieBox">
+					<div class="xhz_movieBox_tv" id="xhz_movieBox_tv">
+						<div class="xhz_games">
+							<h3 class="clearFix">
+								<span>+</span>
+								今日有新游戏
+							</h3>
+						</div>
+						<div class="xhz_listBox" id="xhz_drop">
+							<ul>
+								<li>
+									<img src="images/liveshow/01.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/02.png" alt=""/>
+									<a href="javascript:;">深圳卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/03.png" alt=""/>
+									<a href="javascript:;">陕西卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/04.png" alt=""/>
+									<a href="javascript:;">无锡卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/05.png" alt=""/>
+									<a href="javascript:;">上视新娱乐</a>
+								</li>
+								<li>
+									<img src="images/liveshow/06.png" alt=""/>
+									<a href="javascript:;">内蒙谷卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/07.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/08.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/09.png" alt=""/>
+									<a href="javascript:;">山东卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/10.png" alt=""/>
+									<a href="javascript:;">黑龙江卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/11.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/12.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/13.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/14.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/15.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/16.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/17.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/18.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/19.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/20.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/21.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								<li>
+									<img src="images/liveshow/22.png" alt=""/>
+									<a href="javascript:;">四川卫视</a>
+								</li>
+								
+							</ul>
+						</div>			
+					</div>
+					<div class="xhz_rollBox" id="xhz_rollBox">
+						<div class="xhz_rollBar"></div>
+						<div class="xhz_rollUp"></div>
+						<div class="xhz_rolldown"></div>
+					</div>
+				</div>
+			 </div>
+		</div>
+		<div id="lb_right">
+
+    <div id="lb_roll" class="lb_rollbox">
+        <a href="javascript:;" class="lb_rollup"><img src="images/icons/con_barUp.png"></a>
+        <a href="javascript:;" class="lb_rolldown"><img src="images/icons/con_barDown.png"></a>
+        <div></div>
+    </div>
+
+    <!--导航部分-->
+    <div class="lb_header clearFix">
+        <a href="javascript:;" class="lb_header_ico1"></a>
+        <a href="javascript:;" class="lb_header_ico2"></a>
+        <ul class="lb_header_list">
+            <li class="on"><a href="javascript:;">首页</a></li>
+            <li><a href="javascript:;">电影</a></li>
+            <li><a href="javascript:;">电视剧</a></li>
+            <li><a href="javascript:;">动漫</a></li>
+            <li><a href="javascript:;">综艺</a></li>
+            <li><a href="javascript:;">音乐</a></li>
+            <li><a href="javascript:;">卫视直播</a></li>
+            <li><a href="javascript:;">影院大片</a></li>
+        </ul>
+        <div class="lb_header_search">
+            <input type="text" value="">
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+
+	<div id="lb_r_inside" class="lb_inside">
+    
+        <!--轮播图部分-->
+        <div id="lb_scroll">
+            <div class="lb_scroll_img">
+                <ul id="lb_scroImg">
+                    <li>
+                        <a href="javascript:;"><img src="images/1.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">箭在弦上（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/2.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">X女特工（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/3.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">X女特工（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/4.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">X女特工（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/5.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">箭在弦上（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/6.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">箭在弦上（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/7.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">箭在弦上（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/8.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">X女特工（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/9.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">X女特工（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="images/10.jpg"></a>
+                        <p class="info_text"><a href="javascript:;">X女特工（第41集大结局）</a></p>
+                        <div class="info_bg"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="lb_scroll_list clearFix">
+                <ul id="lb_scroList">
+                    <li class="on"><a href="javascript:;"><img src="images/small_01.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_02.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_03.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_01.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_02.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_03.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_01.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_02.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_03.jpg"></a></li>
+                    <li><a href="javascript:;"><img src="images/small_01.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--今日热点-->
+        <div class="lb_video">
+            <div class="lb_vhead clearFix">
+                <h4>今日热点</h4>
+            </div>
+            <ul class="lb_bd clearFix">
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/lb_video_img_1.jpg">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p><a href="javascript:;">扬州发现隋炀帝真正陵寝</a></p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/lb_video_img_1.jpg">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p><a href="javascript:;">扬州发现隋炀帝真正陵寝</a></p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/lb_video_img_1.jpg">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p><a href="javascript:;">扬州发现隋炀帝真正陵寝</a></p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/lb_video_img_1.jpg">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p><a href="javascript:;">扬州发现隋炀帝真正陵寝</a></p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/lb_video_img_1.jpg">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p><a href="javascript:;">扬州发现隋炀帝真正陵寝</a></p>
+                </li>            
+            </ul>
+        </div>
+        
+        <!--电影-->
+        <div class="lb_video lb_bd">
+            <div class="lb_vhead clearFix">
+                <h4>电影</h4>
+                <p><a href="javascript:;">华语</a> | <a href="javascript:;">好莱坞</a> | <a href="javascript:;">欧洲</a> | <a href="javascript:;">日本</a> | <a href="javascript:;">韩国</a> | <a href="javascript:;">更多&gt;&gt;</a></p>
+            </div>
+            <ul class="clearFix">
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg2.jpg" width="120">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg2.jpg" width="120">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg2.jpg" width="120">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg2.jpg" width="120">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg2.jpg" width="120">
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>            
+            </ul>
+        </div>
+        
+        <!--电视剧-->
+        <div class="lb_video">
+            <div class="lb_vhead clearFix">
+                <h4>电视剧</h4>
+                <p><a href="javascript:;">华语</a> | <a href="javascript:;">好莱坞</a> | <a href="javascript:;">欧洲</a> | <a href="javascript:;">日本</a> | <a href="javascript:;">韩国</a> | <a href="javascript:;">更多&gt;&gt;</a></p>
+            </div>
+            <ul class="col4 clearFix">
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li class="lb_fr">
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li class="lb_fr">
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg3.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+    
+            </ul>
+        </div>
+        
+        <!--广告-->
+        <div class="ads">
+            <img src="images/ad2.png">
+        </div>
+    
+        <!--综艺-->
+        <div class="lb_video lb_bd">
+            <div class="lb_vhead clearFix">
+                <h4>综艺</h4>
+                <p><a href="javascript:;">华语</a> | <a href="javascript:;">好莱坞</a> | <a href="javascript:;">欧洲</a> | <a href="javascript:;">日本</a> | <a href="javascript:;">韩国</a> | <a href="javascript:;">更多&gt;&gt;</a></p>
+            </div>
+            <ul class="col4 zy clearFix">
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg4.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg4.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg4.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li class="lb_fr">
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg4.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <!--动漫-->
+        <div class="lb_video lb_bd">
+            <div class="lb_vhead clearFix">
+                <h4>动漫</h4>
+                <p><a href="javascript:;">华语</a> | <a href="javascript:;">好莱坞</a> | <a href="javascript:;">欧洲</a> | <a href="javascript:;">日本</a> | <a href="javascript:;">韩国</a> | <a href="javascript:;">更多&gt;&gt;</a></p>
+            </div>
+            <ul class="col4 zy clearFix">
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg5.jpg">
+                        <span class="lb_bg">86分10秒</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg5.jpg">
+                        <span class="lb_bg">86分10秒</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg5.jpg">
+                        <span class="lb_bg">86分10秒</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li class="lb_fr">
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg5.jpg">
+                        <span class="lb_bg">86分10秒</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <!--原创 · 微栏目-->
+        <div class="lb_video">
+            <div class="lb_vhead clearFix">
+                <h4>原创 · 微栏目</h4>
+                <p><a href="javascript:;">华语</a> | <a href="javascript:;">好莱坞</a> | <a href="javascript:;">欧洲</a> | <a href="javascript:;">日本</a> | <a href="javascript:;">韩国</a> | <a href="javascript:;">更多&gt;&gt;</a></p>
+            </div>
+            <ul class="col4 zy clearFix">
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg6.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg6.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li>
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg6.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+                <li class="lb_fr">
+                    <a class="lb_showimg" href="javascript:;">
+                        <img src="images/av_eg6.jpg">
+                        <span class="lb_bg">13集全</span>
+                        <span class="lb_squre"></span>
+                        <span class="lb_play"></span>
+                    </a>
+                    <p>
+                        <a href="javascript:;">扬州发现隋炀帝真正陵寝</a>
+                        <span>扬州发现隋炀帝</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+		<!--尾--><!--尾--><!--尾--><!--尾--><!--尾--><!--尾--><!--尾--><!--尾-->
+		<div class="foot_yyz">
+			<img src="images/footer.png" alt="" />
+		</div>
+	</div>
+</body>
+</html>

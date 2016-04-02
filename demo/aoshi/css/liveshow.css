@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.bigbox_yyz{height:638px;overflow:hidden;}
+.user_yyz{height:570px; overflow:hidden; }
+
+#lb_right{
+	height:570px;
+}
+
+.xhz_box{width:236px;height:570px;background:#262626;}
+.xhz_movieBox{width:236px;height:440px;overflow:hidden;position:relative;background:#0a0a0a;}
+.xhz_games{width:220px;height:22px;background:red;}
+.xhz_games h3{color:#fcba04;height:22px;line-height:22px;background:#303030 url(../images/icons/icons01.png) no-repeat 5px top;padding-left:27px;font-size:12px;}
+.xhz_games span{float:right;margin-right:10px;color:#fff;}
+.xhz_rollBox{width:15px;height:440px;background:#0a0a0a;position:absolute;right:0;top:0;}
+.xhz_rollBar{width:13px;height:231px;background:#403e3f;position:absolute;left:1px;top:13px;}
+.xhz_rollUp{width:13px;height:11px;background:url(../images/rollBarUp_bg.png) no-repeat;position:absolute;top:1px;left:1px;}
+.xhz_rolldown{width:13px;height:11px;background:url(../images/rollBarDown_bg.png) no-repeat;position:absolute;bottom:1px;left:1px;}
+.xhz_movieBox_tv{width:221px;height:838px;position:absolute;left:0;top:0;}
+.xhz_listBox{margin-top:2px;height:100%;}
+.xhz_listBox ul{background:#353537;position:relative;}
+.xhz_listBox ul li a{color:#cbcbcb;font-size:14px; padding-left:73px;}
+.xhz_listBox ul li{height:36px;width:100%;line-height:36px;margin-bottom:1px;background:#312f30;position:relative;}
+.xhz_listBox ul li img{position:absolute;left:24px;top:5px;}
+.xhz_listBox ul li.on{height:36px;width:100%;background:#0a0a0a url(../images/liveshow/playBtn.gif) no-repeat 180px 10px;}

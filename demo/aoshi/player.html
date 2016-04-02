@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>player</title>
+</head>
+<link href="css/common.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link href="css/player.css" rel="stylesheet">
+<script src="js/addready.js"></script>
+<script src="js/mouseWheel.js"></script>
+<script src="js/player.js"></script>
+<body>
+	<div class="box_yyz wrapper clearfix">
+		<!--头-->
+		<div class="header_yyz">
+			<img src="images/header.png" alt="" />
+			<a href="index.html" class="st_index">视频库</a>
+			<a href="liveshow.html" class="st_liveshow">播放器</a>
+			<a href="player.html" class="st_player on">直播</a>
+		</div>
+		<!--猫头-->
+		<div class="user_yyz clearfix">
+			<div class="search_yyz fl">
+				<input type="text" class="seartxt_yyz">
+				<input type="button" class="searbtn_yyz">
+			</div>
+			<div class="usercon_yyz fl">
+				<ul class="userlist_yyz clearfix">
+					<li class="fl clearfix"><a href="javascript:;" class="active_yyz">傲视影音</a></li>
+					<li class="fl clearfix"><a href="javascript:;">我的播放</a></li>
+					<li class="fl clearfix"><a href="javascript:;">直播</a></li>
+					<li class="fl clearfix"><a href="javascript:;">游戏</a></li>
+					<li class="fl clearfix" style="border-right:none"><a href="javascript:;">用户</a></li>
+				</ul>
+				<div class="usershow_yyz clearfix">
+					<div class="userimg_yyz fl">
+						<img src="images/face.png" alt=" /">
+					</div>
+					<h3 class="fl"> 
+						strive_chen
+						<a href="javascript:;"><img src="images/user_doudou.png" alt=" /"></a>
+					</h3>
+					<p class="fl clearfix userlv">
+						<span class="fl lvimg_yyz"></span>
+						<span class="fl sunimg_yyz">(0)</span>
+						<span class="fl moonimg_yyz">(0)</span>
+						<span class="fl starimg_yyz">(0)</span>
+					</p>
+					<p class="fl clearfix usermoney">
+						<span class="fl">我的硬币:<a href="javascript:;" class="count">1000</a></span>
+						<a href="javascript:;" class="changemoney">我要兑换</a>
+					</p>
+				</div>
+			</div>
+			
+            <div class="movieBox">
+            	<div class="rollBox" id="rollBox">
+                	<div class="rollBar" style="display: block; height: 302.5px; top: 13px;"></div>
+                    <div class="rollBarUp"></div>
+                    <div class="rollBarDown"></div>
+                </div>
+				
+                <div class="movieBox_msg" style="top: 0px;">
+                	<div class="new_games">
+                    	<h3><span>+</span>今日有新游戏</h3>
+                    </div>
+                    <!---播放历史-->
+                    <div class="movie_moreMsg">
+                        <div class="movie_moreMsgTitle">
+                        	<span class="move_moreMsgBtn">-</span>
+                            <ul>
+                                <li class="">播放历史</li>
+                                <li class="active">我的收藏</li>
+                            </ul>
+                        </div>
+                        <div>
+                        	<div class="movie_moreMsgCon play_history" style="display: none;">
+                                <div class="historyList">
+                                    <span class="time">13:34</span><a href="###">万水千山风雨情-片花</a>
+                                    <div class="movie_series">
+                                        <a href="###" class="levelActive">1</a>
+                                        <a href="###" class="level">2</a>
+                                        <a href="###" class="level">3</a>
+                                        <a href="###" class="level">4</a>
+                                        <a href="###" class="level">5</a>
+                                        <a href="###" class="level">6</a>
+                                        <a href="###" class="level">7</a>
+                                        <a href="###" class="level">8</a>
+                                        <a href="###" class="level">9</a>
+                                        <a href="###" class="level">10</a>
+                                        <a href="###" class="level">11</a>
+                                        <a href="###" class="level">12</a>
+                                        <a href="###" class="level">13</a>
+                                        <a href="###" class="level">14</a>
+                                        <a href="###" class="level">15</a>
+                                        <a href="###" class="level">16</a>
+                                        <a href="###" class="level">17</a>
+                                        <a href="###" class="level">18</a>
+                                    </div>
+                                </div>
+                                <div class="historyList"><span class="played">played</span><a href="###">楚汉争霸-再爆片花</a></div>
+                                <div class="historyList"><span class="played">played</span><a href="###">箭在弦上-03预告</a></div>
+                                <div class="historyList"><span class="time">--:--</span><a href="###">安徽卫视-片花</a></div>
+                                <div class="historyList"><span class="time">13:34</span><a href="###">江湖(刘德华张学友陈冠</a></div>
+                                <div class="historyList"><span class="time">--:--</span><a href="###">安徽卫视-片花</a></div>
+                                <div class="historyList"><span class="time">13:34</span><a href="###">江湖(刘德华张学友陈冠</a></div>
+                                <div class="historyList"><span class="time">--:--</span><a href="###">安徽卫视-片花</a></div>
+                                <div class="historyList"><span class="time">13:34</span><a href="###">江湖(刘德华张学友陈冠</a></div>
+                            </div>
+                            <div class="movie_moreMsgCon play_history" style="display: block;">
+                                <div class="historyList">
+                                    <span class="time">13:34</span><a href="###">strive Movie-片花</a>
+                                    <div class="movie_series">
+                                        <a href="###" class="levelActive">1</a>
+                                        <a href="###" class="level">2</a>
+                                        <a href="###" class="level">3</a>
+                                        <a href="###" class="level">4</a>
+                                        <a href="###" class="level">5</a>
+                                        <a href="###" class="level">6</a>
+                                        <a href="###" class="level">7</a>
+                                        <a href="###" class="level">8</a>
+                                        <a href="###" class="level">9</a>
+                                        <a href="###" class="level">10</a>
+                                        <a href="###" class="level">11</a>
+                                        <a href="###" class="level">12</a>
+                                        <a href="###" class="level">13</a>
+                                        <a href="###" class="level">14</a>
+                                        <a href="###" class="level">15</a>
+                                        <a href="###" class="level">16</a>
+                                        <a href="###" class="level">17</a>
+                                        <a href="###" class="level">18</a>
+                                    </div>
+                                </div>
+                                <div class="historyList"><span class="played">played</span><a href="###">楚汉争霸-再爆片花</a></div>
+                                <div class="historyList"><span class="played">played</span><a href="###">箭在弦上-03预告</a></div>
+                                <div class="historyList"><span class="time">--:--</span><a href="###">安徽卫视-片花</a></div>
+                                <div class="historyList"><span class="time">13:34</span><a href="###">江湖(刘德华张学友陈冠</a></div>
+                                <div class="historyList"><span class="time">--:--</span><a href="###">安徽卫视-片花</a></div>
+                                <div class="historyList"><span class="time">13:34</span><a href="###">江湖(刘德华张学友陈冠</a></div>
+                                <div class="historyList"><span class="time">--:--</span><a href="###">安徽卫视-片花</a></div>
+                                <div class="historyList"><span class="time">13:34</span><a href="###">江湖(刘德华张学友陈冠</a></div>
+                            </div>
+                        </div>
+                        <div class="play_historyOper">
+                        	<a href="###" class="clearAll">清空</a>
+                            <a href="###" class="open">+ 展开</a>
+                            <a href="###" class="lookAll">查看全部</a>
+                        </div>
+                    </div>
+                    
+                    <!--ad-->
+                    <div class="ad">
+                    	<a href="###"><img src="images/ad.png"></a>
+                    </div>
+				</div>
+            </div>
+       
+		</div>
+		
+		<div class="play_box">
+		<div class="play_top clearFix">
+			<h3 class="title fl">第十一期全程回顾[高清]</h3>
+			<ul class="play_btn fr">
+				<li class="btn1 fl">
+					<a href="javascript:;">1</a>
+				</li>
+				<li class="btn2 fl">
+					<a href="javascript:;">2</a>
+				</li>
+				<li class="btn3 fl">
+					<a href="javascript:;">3</a>
+				</li>
+				<li class="btn4 fl">
+					<a href="javascript:;">4</a>
+				</li>
+			</ul>
+		</div>
+		<div class="play_down">
+			<embed src="http://player.youku.com/player.php/sid/XNTQzNzQxMDY0/v.swf" >
+		</div>
+	</div>
+		<!--尾-->
+		<div class="foot_yyz">
+			<img src="images/footer.png" alt="" />
+		</div>
+	</div>
+</body>
+</html>
