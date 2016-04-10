@@ -20,12 +20,12 @@ domReady(function(){
 			oA[i].onmouseout=function(){
 				elastic(oS,iNow*oA[0].offsetWidth+40);
 			};
-			(function(index){
+			;(function(index){
 				oA[i].onclick=function(){
 					for(var i=0;i<oA.length;i++){
 						oA[i].style.color='#fff'
 					}
-					this.style.color='#997';
+					oA[index].style.color='#997';
 					iNow=index;
 				};
 			})(i);
